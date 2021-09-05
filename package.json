@@ -68,6 +68,8 @@
     "slick-carousel": "^1.8.1",
     "slugify": "^1.5.3",
     "subscriptions-transport-ws": "^0.9.18",
+    "twilio-video": "^2.16.0",
+    "webrtc-adapter": "^8.1.0",
     "ws": "^7.4.3",
     "xss": "^1.0.9",
     "yup": "^0.28.5"
