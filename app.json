@@ -1,0 +1,11 @@
+{
+  "name": "Host app advisor",
+  "description": "Host app advisor project.",
+  "keywords": [
+    "contentful",
+    "gatsby",
+    "static",
+    "ssg"
+  ],
+  "success_url": "/"
+}
