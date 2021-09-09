@@ -5,7 +5,7 @@ import DIV from '@vl/redata/DIV.macro';
 
 import HomePage from '@uz/unitz-pages-advisor/Home';
 import withPageContext from '@uz/unitz-pages/withPageContext';
-import App from '@uz/unitz-app-web/UserApp';
+import App from '@uz/unitz-app-web/AdvisorApp';
 
 import Layout from '@uz/unitz-layout-web/LayoutMain';
 import SEO from '@uz/unitz-layout-web/SEO';
