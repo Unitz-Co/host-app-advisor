@@ -1,18 +1,15 @@
 import React from 'react';
 
-import { ctx } from '@vl/redata';
-import DIV from '@vl/redata/DIV.macro';
-
-import HomePage from '@uz/unitz-pages-advisor/Home';
 import withPageContext from '@uz/unitz-pages/withPageContext';
 import App from '@uz/unitz-app-web/AdvisorApp';
-
 import Layout from '@uz/unitz-layout-web/LayoutMain';
-import SEO from '@uz/unitz-layout-web/SEO';
-
 import PageData from '../data/PageDataQuery';
+import DIV from '@vl/redata/DIV.macro';
+import SEO from '@uz/unitz-layout-web/SEO';
+import { ctx } from '@vl/redata';
+import Calendar from '@uz/unitz-pages-advisor/Calendar';
 
-const HomeIndex = withPageContext((props) => {
+const CalendarIndex = withPageContext((props) => {
   return (
     <App>
       <Layout location={props.location} PageData={PageData}>
@@ -21,7 +18,7 @@ const HomeIndex = withPageContext((props) => {
           <Layout.POS name="app-header">{ctx.apply('ctf.renderSection', { name: 'advisorNavbarSection' })}</Layout.POS>
           <Layout.POS name="app-body">
             <div className="min-h-full bg-background1">
-              <HomePage />
+              <Calendar />
             </div>
           </Layout.POS>
           <Layout.POS name="app-footer">{ctx.apply('ctf.renderSection', { name: 'articleFooterSection' })}</Layout.POS>
@@ -31,4 +28,4 @@ const HomeIndex = withPageContext((props) => {
   );
 });
 
-export default HomeIndex;
+export default CalendarIndex;
