@@ -4,6 +4,7 @@ require('@vl/mod-config/dotenv');
 const fibjsFns = require('@vl/mod-clients/fibjsFns');
 
 const firebase = require('firebase-admin');
+
 firebase.initializeApp();
 
 const sessionInputs = {
