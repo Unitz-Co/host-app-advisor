@@ -52,12 +52,12 @@ const gbConfig = gatsbyMergeConfig(
       'gatsby-plugin-sharp',
       'gatsby-plugin-postcss',
       'gatsby-plugin-sass',
-      {
-        resolve: 'gatsby-plugin-offline',
-        options: {
-          appendScript: require.resolve(`${__dirname}/src/firebase-messaging-sw.js`),
-        },
-      },
+      // {
+      //   resolve: 'gatsby-plugin-offline',
+      //   options: {
+      //     appendScript: require.resolve(`${__dirname}/src/firebase-messaging-sw.js`),
+      //   },
+      // },
       {
         resolve: 'gatsby-source-contentful',
         options: contentfulConfig,
