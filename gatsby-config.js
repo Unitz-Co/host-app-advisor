@@ -58,6 +58,7 @@ const gbConfig = gatsbyMergeConfig(
       //     appendScript: require.resolve(`${__dirname}/src/firebase-messaging-sw.js`),
       //   },
       // },
+      'gatsby-plugin-remove-serviceworker',
       {
         resolve: 'gatsby-source-contentful',
         options: contentfulConfig,
