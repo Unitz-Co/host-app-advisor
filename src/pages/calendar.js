@@ -12,14 +12,14 @@ import Calendar from '@uz/unitz-pages-advisor/Calendar';
 const CalendarIndex = withPageContext((props) => {
   return (
     <App>
-      <Layout location={props.location} PageData={PageData}>
+      <Layout location={props.location} PageData={PageData} fullScreen>
         <DIV>
           <SEO pageData={ctx.apply('ctf.findPage', { name: 'Homepage' })} />
           <Layout.POS name="app-header">{ctx.apply('ctf.renderSection', { name: 'advisorNavbarSection' })}</Layout.POS>
           <Layout.POS name="app-body">
-            <div className="min-h-full bg-background1">
-              <Calendar />
-            </div>
+            {/* <div className=" bg-background1"> */}
+            <Calendar />
+            {/* </div> */}
           </Layout.POS>
           <Layout.POS name="app-footer">{ctx.apply('ctf.renderSection', { name: 'articleFooterSection' })}</Layout.POS>
         </DIV>
