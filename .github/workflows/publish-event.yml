@@ -7,12 +7,12 @@ jobs:
   publish-event:
     runs-on: ubuntu-latest
     env:
-      working-directory: ./ws/packages/host-app-user
+      working-directory: ./ws/packages/host-app-advisor
     steps:
-      - name: setup node v12
+      - name: setup node v14
         uses: actions/setup-node@v2
         with:
-          node-version: '12'
+          node-version: '14'
           check-latest: true
       - name: cleanup
         run: |
