@@ -6,7 +6,10 @@ on:
       - "beta"
 jobs:
   beta:
-    runs-on: ubuntu-latest
+    runs-on: macOS-latest
+    strategy:
+      matrix:
+        destination: ['platform=iOS Simulator,OS=13.1,name=iPhone 11']
     env:
       working-directory: ./ws/packages/host-app-advisor
     steps:
