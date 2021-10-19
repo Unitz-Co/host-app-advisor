@@ -34,13 +34,6 @@ jobs:
           path: config/env-app-web
           token: ${{ secrets.PAT_TOKEN }}
           persist-credentials: true
-      - name: clone credentials
-        uses: actions/checkout@v2
-        with:
-          repository: Unitz-Co/credentials
-          path: config/credentials
-          token: ${{ secrets.PAT_TOKEN }}
-          persist-credentials: true
       - name: clone config
         uses: actions/checkout@v2
         with:
