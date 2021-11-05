@@ -1,10 +1,13 @@
 const _ = require('lodash');
 const slugify = require('slugify');
 const { routeStore } = require('@vl/mod-utils/gatsbyRouteStore');
+const querystring = require('querystring');
 
 routeStore.addRule('course', {
-  url: () => {
-    return `/course`;
+  url: (params) => {
+    let search = `${querystring.stringify(params)}`;
+    search = search ? `?${search}` : '';
+    return `/course${search}`;
   },
   parse: (urlObject) => {
     const params = {};
