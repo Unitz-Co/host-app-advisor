@@ -104,9 +104,8 @@
     "tailwindcss": "^2.1.1"
   },
   "keywords": [
-    "gatsby",
-    "contentful",
-    "starter"
+    "unitz",
+    "unitz-advisor"
   ],
   "license": "MIT",
   "main": "n/a",
