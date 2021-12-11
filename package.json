@@ -1,6 +1,6 @@
 {
   "name": "@unitz/host-app-advisor",
-  "description": "Unitz advisor web",
+  "description": "Unitz web app for advisor",
   "private": true,
   "version": "0.0.1",
   "dependencies": {
