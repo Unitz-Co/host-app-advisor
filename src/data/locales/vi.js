@@ -44,6 +44,7 @@ const GbCtfProviderQuery_vi = graphql`
         id
         name
         shortText
+        className
         longText {
           longText
         }
@@ -190,6 +191,9 @@ const GbCtfProviderQuery_vi = graphql`
       nodes {
         id: contentful_id
         displayName
+        featured
+        highlight
+        highlightSlug
         avatarUrl {
           id
           fixed {
