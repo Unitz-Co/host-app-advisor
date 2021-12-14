@@ -3,7 +3,7 @@ import React from 'react';
 import { ctx } from '@vl/redata';
 import DIV from '@vl/redata/DIV.macro';
 
-import ForgotPasswordPage from '@uz/unitz-pages/ForgotPasswordPage';
+import ForgotPasswordPage from '@uz/unitz-pages-advisor/ForgotPasswordPage';
 
 import App from '@uz/unitz-app-web/AdvisorApp';
 import SEO from '@uz/unitz-layout-web/SEO';
