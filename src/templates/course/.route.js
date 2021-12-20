@@ -38,6 +38,23 @@ routeStore.addRule('courseDetail', {
   },
 });
 
+routeStore.addRule('coursePreview', {
+  url: (params) => {
+    const id = _.get(params, 'id', 'unknown');
+    return `${routeStore.getAppOrigin('user')}/course/detail?id=${id}`;
+  },
+  parse: (urlObject) => {
+    const params = {};
+    for (let param in urlObject.searchParams) {
+      params[param] = urlObject.searchParams.get(param);
+    }
+    return params;
+  },
+  match: (urlObject) => {
+    return urlObject.pathname === 'course/preview';
+  },
+});
+
 routeStore.addRule('courseEdit', {
   url: (params) => {
     const id = _.get(params, 'id', 'unknown');
