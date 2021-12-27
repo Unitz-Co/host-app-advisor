@@ -19,7 +19,7 @@ const HomeIndex = withPageContext((props) => {
           <Layout.POS name="app-body">
             <HomePage />
           </Layout.POS>
-          <Layout.POS name="app-footer">{ctx.apply('ctf.renderSection', { name: 'FooterSection' })}</Layout.POS>
+          <Layout.POS name="app-footer">{ctx.apply('ctf.renderSection', { name: 'authFooterSection' })}</Layout.POS>
         </DIV>
       </Layout>
     </App>
