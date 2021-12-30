@@ -30,7 +30,7 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: 'Unitz VN',
+    title: 'Unitz VN - Advisor',
   },
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [
@@ -59,10 +59,9 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN_APP,
         contentItemFilter: (item) => {
           const contentType = _.get(item, 'sys.contentType.sys.id');
+          const disabled = _.get(item, 'fields.disabled.vi-VN');
           if (contentType === 'category') {
-            const displayName = _.get(item, 'fields.displayName.en-US');
-            const allowedCatNames = ['Kỹ năng sống'];
-            if (!allowedCatNames.includes(displayName)) {
+            if (disabled) {
               return false;
             }
           }
