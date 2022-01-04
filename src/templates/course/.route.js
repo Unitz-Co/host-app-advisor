@@ -5,6 +5,10 @@ const querystring = require('querystring');
 
 routeStore.addRule('course', {
   url: (params) => {
+    // if (process.env.GATSBY_APP_ENV && _.get(params, 'slug')) {
+    //   return `/courses/${_.get(params, 'slug')}`;
+    // }
+
     let search = `${querystring.stringify(params)}`;
     search = search ? `?${search}` : '';
     return `/course${search}`;
@@ -23,6 +27,10 @@ routeStore.addRule('course', {
 
 routeStore.addRule('courseDetail', {
   url: (params) => {
+    // if (process.env.GATSBY_APP_ENV && _.get(params, 'slug')) {
+    //   return `/courses/${_.get(params, 'slug')}`;
+    // }
+
     const id = _.get(params, 'id', 'unknown');
     return `/course/detail?id=${id}`;
   },
@@ -40,6 +48,10 @@ routeStore.addRule('courseDetail', {
 
 routeStore.addRule('coursePreview', {
   url: (params) => {
+    if (process.env.GATSBY_APP_ENV && _.get(params, 'slug')) {
+      return `${routeStore.getAppOrigin('user')}/courses/${_.get(params, 'slug')}`;
+    }
+
     const id = _.get(params, 'id', 'unknown');
     return `${routeStore.getAppOrigin('user')}/course/detail?id=${id}`;
   },
