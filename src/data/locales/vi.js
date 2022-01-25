@@ -70,6 +70,68 @@ const GbCtfProviderQuery_vi = graphql`
             srcSet
           }
         }
+        nodes {
+          id
+          name
+          className
+          shortText
+          contentful_id
+          sections {
+            ... on ContentfulItem {
+              id
+              name
+              shortText
+              sys {
+                type
+                contentType {
+                  sys {
+                    type
+                    linkType
+                    id
+                  }
+                }
+              }
+              component {
+                id
+                name
+              }
+            }
+            ... on ContentfulSection {
+              id
+              name
+              shortText
+              layout {
+                id
+                name
+              }
+              enhancers {
+                id
+                name
+              }
+              contentful_id
+              sys {
+                type
+                contentType {
+                  sys {
+                    type
+                    linkType
+                    id
+                  }
+                }
+              }
+            }
+          }
+          sys {
+            type
+            contentType {
+              sys {
+                type
+                linkType
+                id
+              }
+            }
+          }
+        }
         sections {
           ... on ContentfulSection {
             id
