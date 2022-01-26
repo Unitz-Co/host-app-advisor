@@ -205,6 +205,10 @@ const GbCtfProviderQuery_vi = graphql`
         detailText {
           detailText
         }
+        buttonProps {
+          type
+          name
+        }
         className
         action
         linkHref
