@@ -1,3 +1,2 @@
-import * as pdfjsLib from 'pdfjs-dist/legacy/build/pdf';
-import PDFJSWorker from 'pdfjs-dist/legacy/build/pdf.worker.entry';
-pdfjsLib.GlobalWorkerOptions.workerSrc = PDFJSWorker;
+import { pdfjs } from 'react-pdf';
+pdfjs.GlobalWorkerOptions.workerSrc = 'pdfjs-dist/legacy/build/pdf.worker.entry';
