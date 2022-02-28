@@ -2,6 +2,38 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 const GbCtfProviderQuery_en = graphql`
   query GbCtfProviderQuery_en {
+    allContentfulAdvisorHelpCenter(filter: { node_locale: { eq: "en-US" } }, sort: { fields: createdAt, order: ASC }) {
+      nodes {
+        id: contentful_id
+        name
+        slug
+        title
+        sub
+        richText {
+          raw
+          references {
+            ... on ContentfulAsset {
+              contentful_id
+              __typename
+              title
+              fixed(width: 750) {
+                src
+              }
+            }
+          }
+        }
+        contentfulchildren {
+          id: contentful_id
+          name
+          slug
+          title
+          sub
+          richText {
+            raw
+          }
+        }
+      }
+    }
     allContentfulPage(filter: { node_locale: { eq: "en-US" } }) {
       nodes {
         id
