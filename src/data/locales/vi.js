@@ -2,7 +2,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 const GbCtfProviderQuery_vi = graphql`
   query GbCtfProviderQuery_vi {
-    allContentfulAdvisorHelpCenter(filter: { node_locale: { eq: "vi-VN" } }, sort: { fields: createdAt, order: ASC }) {
+    allContentfulHelpCenter(filter: { node_locale: { eq: "vi-VN" } }, sort: { fields: createdAt, order: ASC }) {
       nodes {
         id
         name
@@ -29,6 +29,16 @@ const GbCtfProviderQuery_vi = graphql`
           title
           richText {
             raw
+          }
+          sys {
+            type
+            contentType {
+              sys {
+                type
+                linkType
+                id
+              }
+            }
           }
         }
       }
