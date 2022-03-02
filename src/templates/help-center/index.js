@@ -6,7 +6,7 @@ import DIV from '@vl/redata/DIV.macro';
 import App from '@uz/unitz-app-web/AdvisorApp';
 import SEO from '@uz/unitz-layout-web/SEO';
 
-import Layout from '@uz/unitz-layout-web/LayoutHelpCenter';
+import Layout from '@uz/unitz-layout-web/LayoutAdvisorHelpCenter';
 import HelpCenter from '@uz/unitz-pages-advisor/HelpCenter';
 import useRoute from '@vl/hooks/useGbRoute';
 import withPageContext from '@uz/unitz-pages/withPageContext';
