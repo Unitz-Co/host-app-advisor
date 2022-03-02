@@ -8,7 +8,7 @@ exports.createPages = withLocale(async function(item, gatsby) {
   // @update query
   const allNodes = await gatsby.graphql(`
   query pagesQuery {
-    allContentfulAdvisorHelpCenter(filter: { node_locale: { eq: "${localeConfig.get('locale')}" } }) {
+    allContentfulHelpCenter(filter: { node_locale: { eq: "${localeConfig.get('locale')}" } }) {
       nodes {
         id: contentful_id
         name
@@ -31,7 +31,7 @@ exports.createPages = withLocale(async function(item, gatsby) {
     }
   }`);
 
-  const pages = _.get(allNodes, 'data.allContentfulAdvisorHelpCenter.nodes', []);
+  const pages = _.get(allNodes, 'data.allContentfulHelpCenter.nodes', []);
 
   return Promise.all(
     pages.map((page) => {
