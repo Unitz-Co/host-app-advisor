@@ -2,7 +2,7 @@ import React from 'react';
 
 import withPageContext from '@uz/unitz-pages/withPageContext';
 import App from '@uz/unitz-app-web/AdvisorApp';
-import Layout from '@uz/unitz-layout-web/LayoutFullPage';
+import Layout from '@uz/unitz-layout-web/LayoutAdvisor';
 import PageData from '../data/PageDataQuery';
 import DIV from '@vl/redata/DIV.macro';
 import SEO from '@uz/unitz-layout-web/SEO';
