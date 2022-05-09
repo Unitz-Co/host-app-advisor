@@ -41,3 +41,24 @@ routeStore.addRule('advisor/profile', {
     return urlObject.pathname === 'advisor/profile';
   },
 });
+routeStore.addRule('meMessageDetail', {
+  url: (params) => {
+    if (process.env.GATSBY_APP_ENV && _.get(params, 'slug')) {
+      return `/message/${_.get(params, 'slug')}`;
+    }
+
+    let search = `${querystring.stringify(_.pick(params, ['id']))}`;
+    search = search ? `?${search}` : '';
+    return `/message${search}`;
+  },
+  parse: (urlObject) => {
+    const params = {};
+    for (let param in urlObject.searchParams) {
+      params[param] = urlObject.searchParams.get(param);
+    }
+    return params;
+  },
+  match: (urlObject) => {
+    return urlObject.pathname === 'me/course';
+  },
+});

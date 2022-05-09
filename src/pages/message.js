@@ -7,7 +7,7 @@ import PageData from '../data/PageDataQuery';
 import DIV from '@vl/redata/DIV.macro';
 import SEO from '@uz/unitz-layout-web/SEO';
 import { ctx } from '@vl/redata';
-import Message from '@uz/unitz-pages-advisor/Message';
+import AdvisorMessage from '@uz/unitz-pages-advisor/AdvisorMessage';
 
 const CalendarIndex = withPageContext((props) => {
   return (
@@ -17,8 +17,8 @@ const CalendarIndex = withPageContext((props) => {
           <SEO pageData={ctx.apply('ctf.findPage', { name: 'Homepage' })} />
           <Layout.POS name="app-header">{ctx.apply('ctf.renderSection', { name: 'advisorNavbarSection' })}</Layout.POS>
           <Layout.POS name="app-body">
-            <div className="min-h-full bg-background1">
-              <Message />
+            <div className="min-h-full bg-background1" style={{ height: '90vh' }}>
+              <AdvisorMessage />
             </div>
           </Layout.POS>
           <Layout.POS name="app-footer">{ctx.apply('ctf.renderSection', { name: 'authFooterSection' })}</Layout.POS>
