@@ -2,7 +2,7 @@ import React from 'react';
 
 import withPageContext from '@uz/unitz-pages/withPageContext';
 import App from '@uz/unitz-app-web/AdvisorApp';
-import Layout from '@uz/unitz-layout-web/LayoutMain';
+import Layout from '@uz/unitz-layout-web/LayoutOnlySection';
 import PageData from '../data/PageDataQuery';
 import DIV from '@vl/redata/DIV.macro';
 import SEO from '@uz/unitz-layout-web/SEO';
@@ -15,11 +15,13 @@ const HomeIndex = withPageContext((props) => {
       <Layout location={props.location} PageData={PageData}>
         <DIV>
           <SEO pageData={ctx.apply('ctf.findPage', { name: 'Supplier Support Center' })} />
-          <Layout.POS name="app-header">{ctx.apply('ctf.renderSection', { name: 'advisorNavbarSection' })}</Layout.POS>
+          {/* <Layout.POS name="app-header">{ctx.apply('ctf.renderSection', { name: 'advisorNavbarSection' })}</Layout.POS> */}
           <Layout.POS name="app-body">
-            <HomePage />
+            <div className="app-row wrapper">
+              <HomePage />
+            </div>
           </Layout.POS>
-          <Layout.POS name="app-footer">{ctx.apply('ctf.renderSection', { name: 'authFooterSection' })}</Layout.POS>
+          {/* <Layout.POS name="app-footer">{ctx.apply('ctf.renderSection', { name: 'authFooterSection' })}</Layout.POS> */}
         </DIV>
       </Layout>
     </App>
